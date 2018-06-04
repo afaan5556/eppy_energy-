@@ -1,14 +1,6 @@
-import sys
-import os
 import csv
 import os
-import sys
-import csv
-import pyepw
 import re
-import regex as regex
-from pyepw.epw import EPW
-from eppy import modeleditor
 from eppy.modeleditor import IDF
 
 ##pack the file into blocks
@@ -39,7 +31,6 @@ def pickupblocks(packedlist, tar):
     '''
     d = {}          ##store data in a dictionary
 
-
 ##Site:Location
     for blocks in packedlist:
         for lines in blocks:
@@ -59,7 +50,6 @@ def pickupblocks(packedlist, tar):
                             d[ind] = value
 
     return(d)
-
 
 def updatesite(packedlist, idf):
     '''
@@ -137,11 +127,6 @@ def UpdateLocationInfinIDF(idf1,ddyname):
         updatesite(packedls,idf1)
     return idf1
 
-##set idd file
-iddfile = "Energy+.idd"
-IDF.setiddname(iddfile)
-DirName = '../eppy trial'
-EPDir = "C:\\EnergyPlusV8-9-0\\"
 ##write epw name into a .csv file for later use of weather file
 def WriteEPWNameToCSV(WeatherPath, CsvPath):
     ls = os.listdir(WeatherPath)
@@ -169,6 +154,11 @@ def ReadFileNameInCsv(dir):
             if i is None: break
         return filename_list
 
+##set idd file
+iddfile = "Energy+.idd"
+IDF.setiddname(iddfile)
+DirName = '../eppy trial'
+EPDir = "C:\\EnergyPlusV8-9-0\\"
 WeatherDir = EPDir+'WeatherData\\weather_files_ddy_epw\\epw\\USA'
 CSVDir = DirName+'/runtrial/WeatherFileNameList.csv'
 WriteEPWNameToCSV(WeatherDir,CSVDir)

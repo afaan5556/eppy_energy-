@@ -1,0 +1,886 @@
+Program Version,EnergyPlus, Version 8.9.0-40101eaafd, YMD=2018.05.31 17:15
+! <Version>, Version ID
+ Version, 8.9
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  6, 10
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 20, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, Yes, Yes, No, Yes, Yes, No
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 0.200, 0.200, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,  -5.05,  -3.21,   0.37,   3.76,  10.17,  13.55,  14.48,  12.77,   8.81,   3.88,  -0.97,  -4.18
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Anchorage Elmendorf AK USA TMY3 WMO#=702720,61.25,-149.80,-9.00,59.00,100618,1.1959
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,KA2 A Flatroof Sample Building,0.000,Suburbs,4.00000E-002,0.40000,FullExterior,25,6
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Value {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <HVACSystemRootFindingAlgorithm>, Value {RegulaFalsi | Bisection | BisectionThenRegulaFalsi | RegulaFalsiThenBisection}
+ HVACSystemRootFindingAlgorithm, RegulaFalsi
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.220,370.000,6.500000E-003
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,UpperLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,18
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,12,174,66
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, 01_A1,0.0,19.48,4.60,0.00,15.54,8.26,1.68,1,1,1,11.61,19.48,4.60,11.91,0.00,3.35,3.35,193.12,CeilingDiffuser,DOE-2,57.60,56.55,48.29,6.31,7,3,2,Yes
+ Zone Information, 01_A2,0.0,2.46,8.26,0.00,6.52,8.32,1.68,1,1,1,2.46,11.61,4.60,11.91,0.00,3.35,3.35,208.70,TARP,DOE-2,62.25,85.84,77.06,6.83,8,4,2,Yes
+ Zone Information, 01_B2,0.0,2.16,21.21,0.00,6.09,21.12,1.68,1,1,1,2.16,11.61,14.96,25.63,0.00,3.35,3.35,324.46,CeilingDiffuser,DOE-2,96.77,99.13,83.98,13.20,10,7,2,Yes
+ Zone Information, 01_C1,0.0,18.92,25.63,1.26E-030,16.14,18.67,1.68,1,1,1,11.61,20.75,11.91,25.63,6.28E-031,3.35,3.35,380.95,CeilingDiffuser,DOE-2,113.62,96.74,80.17,14.63,11,8,2,Yes
+ Zone Information, 02_A1,0.0,19.48,4.60,3.35,15.54,8.26,5.03,1,1,1,11.61,19.48,4.60,11.91,3.35,6.71,3.35,193.12,CeilingDiffuser,DOE-2,57.60,56.55,47.80,6.79,7,3,2,Yes
+ Zone Information, 02_A2,0.0,2.46,8.26,3.35,6.52,8.32,5.03,1,1,1,2.46,11.61,4.60,11.91,3.35,6.71,3.35,208.70,TARP,DOE-2,62.25,85.84,76.33,7.56,8,4,2,Yes
+ Zone Information, 02_B2,0.0,2.16,21.21,3.35,6.09,21.12,5.03,1,1,1,2.16,11.61,14.96,25.63,3.35,6.71,3.35,324.46,CeilingDiffuser,DOE-2,96.77,99.13,81.69,15.49,10,7,2,Yes
+ Zone Information, 02_C1,0.0,18.92,25.63,3.35,16.14,18.67,5.03,1,1,1,11.61,20.75,11.91,25.63,3.35,6.71,3.35,380.95,CeilingDiffuser,DOE-2,113.62,96.74,77.21,17.58,11,8,2,Yes
+ Zone Information, 03_A1,0.0,19.48,4.60,6.71,15.54,8.26,8.38,1,1,1,11.61,19.48,4.60,11.91,6.71,10.06,3.35,193.12,CeilingDiffuser,DOE-2,57.60,56.55,47.80,6.79,7,3,0,Yes
+ Zone Information, 03_A2,0.0,2.46,8.26,6.71,6.52,8.32,8.38,1,1,1,2.46,11.61,4.60,11.91,6.71,10.06,3.35,208.70,CeilingDiffuser,DOE-2,62.25,85.84,76.33,7.56,8,4,0,Yes
+ Zone Information, 03_B2,0.0,2.16,21.21,6.71,6.09,21.12,8.38,1,1,1,2.16,11.61,14.96,25.63,6.71,10.06,3.35,324.46,CeilingDiffuser,DOE-2,96.77,99.13,81.69,15.49,10,7,0,Yes
+ Zone Information, 03_C1,0.0,18.92,25.63,6.71,16.14,18.67,8.38,1,1,1,11.61,20.75,11.91,25.63,6.71,10.06,3.35,380.95,CeilingDiffuser,DOE-2,113.62,96.74,77.21,17.58,11,8,2,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, 01_A1,57.60,1.6,37.161,2.691E-002,4.127,87.268,0.000,0.000,0.000,0.000,91.395,No
+ Zone Internal Gains Nominal, 01_A2,62.25,1.6,40.158,2.490E-002,3.729,80.755,0.000,0.000,0.000,0.000,84.484,No
+ Zone Internal Gains Nominal, 01_B2,96.77,2.5,39.180,2.552E-002,3.260,56.045,0.000,0.000,0.000,0.000,59.305,No
+ Zone Internal Gains Nominal, 01_C1,113.62,3.4,33.516,2.984E-002,3.085,49.676,0.000,0.000,0.000,0.000,52.761,No
+ Zone Internal Gains Nominal, 02_A1,57.60,1.6,37.161,2.691E-002,4.127,87.268,0.000,0.000,0.000,0.000,91.395,No
+ Zone Internal Gains Nominal, 02_A2,62.25,1.6,40.158,2.490E-002,3.729,80.755,0.000,0.000,0.000,0.000,84.484,No
+ Zone Internal Gains Nominal, 02_B2,96.77,2.5,39.180,2.552E-002,3.260,56.045,0.000,0.000,0.000,0.000,59.305,No
+ Zone Internal Gains Nominal, 02_C1,113.62,3.4,33.516,2.984E-002,3.085,49.676,0.000,0.000,0.000,0.000,52.761,No
+ Zone Internal Gains Nominal, 03_A1,57.60,1.6,37.161,2.691E-002,4.127,87.268,0.000,0.000,0.000,0.000,91.395,No
+ Zone Internal Gains Nominal, 03_A2,62.25,1.6,40.158,2.490E-002,3.729,80.755,0.000,0.000,0.000,0.000,84.484,No
+ Zone Internal Gains Nominal, 03_B2,96.77,2.5,39.180,2.552E-002,3.260,56.045,0.000,0.000,0.000,0.000,59.305,No
+ Zone Internal Gains Nominal, 03_C1,113.62,3.4,33.516,2.984E-002,3.085,49.676,0.000,0.000,0.000,0.000,52.761,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Nominal Minimum Number of People,Nominal Maximum Number of People
+ People Internal Gains Nominal, 01_A1 PEOPLE 1,OCCPROTOCOL,01_A1,57.60,1.6,1.6,2.691E-002,37.161,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,0,2
+ People Internal Gains Nominal, 02_A1 PEOPLE 1,OCCPROTOCOL,02_A1,57.60,1.6,1.6,2.691E-002,37.161,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,0,2
+ People Internal Gains Nominal, 03_A1 PEOPLE 1,OCCPROTOCOL,03_A1,57.60,1.6,1.6,2.691E-002,37.161,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,0,2
+ People Internal Gains Nominal, 01_A2 PEOPLE 2,OCCPROTOCOL,01_A2,62.25,1.6,1.6,2.490E-002,40.158,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,0,2
+ People Internal Gains Nominal, 02_A2 PEOPLE 2,OCCPROTOCOL,02_A2,62.25,1.6,1.6,2.490E-002,40.158,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,0,2
+ People Internal Gains Nominal, 03_A2 PEOPLE 2,OCCPROTOCOL,03_A2,62.25,1.6,1.6,2.490E-002,40.158,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,0,2
+ People Internal Gains Nominal, 01_B2 PEOPLE 6,OCCPROTOCOL,01_B2,96.77,2.5,2.5,2.552E-002,39.180,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,1,2
+ People Internal Gains Nominal, 02_B2 PEOPLE 6,OCCPROTOCOL,02_B2,96.77,2.5,2.5,2.552E-002,39.180,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,1,2
+ People Internal Gains Nominal, 03_B2 PEOPLE 6,OCCPROTOCOL,03_B2,96.77,2.5,2.5,2.552E-002,39.180,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,1,2
+ People Internal Gains Nominal, 01_C1 PEOPLE 7,OCCPROTOCOL,01_C1,113.62,3.4,3.4,2.984E-002,33.516,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,1,3
+ People Internal Gains Nominal, 02_C1 PEOPLE 7,OCCPROTOCOL,02_C1,113.62,3.4,3.4,2.984E-002,33.516,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,1,3
+ People Internal Gains Nominal, 03_C1 PEOPLE 7,OCCPROTOCOL,03_C1,113.62,3.4,3.4,2.984E-002,33.516,0.300,0.700,AutoCalculate,MIDRISEAPARTMENT ACTIVITYDOE,No,3.8200E-008,1,3
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use Category,Nominal Minimum Lighting Level {W},Nominal Maximum Lighting Level {W}
+ Lights Internal Gains Nominal, 01_A1 LIGHTS 2,MIDRISEAPARTMENT APARTMENT LIGHTDOE,01_A1,57.60,1.6,237.708,4.127,153.360,0.000,0.000,0.000,1.000,1.000,General,4.754,237.708
+ Lights Internal Gains Nominal, 02_A1 LIGHTS 2,MIDRISEAPARTMENT APARTMENT LIGHTDOE,02_A1,57.60,1.6,237.708,4.127,153.360,0.000,0.000,0.000,1.000,1.000,General,4.754,237.708
+ Lights Internal Gains Nominal, 03_A1 LIGHTS 2,MIDRISEAPARTMENT APARTMENT LIGHTDOE,03_A1,57.60,1.6,237.708,4.127,153.360,0.000,0.000,0.000,1.000,1.000,General,4.754,237.708
+ Lights Internal Gains Nominal, 01_A2 LIGHTS 3,MIDRISEAPARTMENT APARTMENT LIGHTDOE,01_A2,62.25,1.6,232.088,3.729,149.734,0.000,0.000,0.000,1.000,1.000,General,4.642,232.088
+ Lights Internal Gains Nominal, 02_A2 LIGHTS 3,MIDRISEAPARTMENT APARTMENT LIGHTDOE,02_A2,62.25,1.6,232.088,3.729,149.734,0.000,0.000,0.000,1.000,1.000,General,4.642,232.088
+ Lights Internal Gains Nominal, 03_A2 LIGHTS 3,MIDRISEAPARTMENT APARTMENT LIGHTDOE,03_A2,62.25,1.6,232.088,3.729,149.734,0.000,0.000,0.000,1.000,1.000,General,4.642,232.088
+ Lights Internal Gains Nominal, 01_B2 LIGHTS 7,MIDRISEAPARTMENT APARTMENT LIGHTDOE,01_B2,96.77,2.5,315.521,3.260,127.741,0.000,0.000,0.000,1.000,1.000,General,6.310,315.521
+ Lights Internal Gains Nominal, 02_B2 LIGHTS 7,MIDRISEAPARTMENT APARTMENT LIGHTDOE,02_B2,96.77,2.5,315.521,3.260,127.741,0.000,0.000,0.000,1.000,1.000,General,6.310,315.521
+ Lights Internal Gains Nominal, 03_B2 LIGHTS 7,MIDRISEAPARTMENT APARTMENT LIGHTDOE,03_B2,96.77,2.5,315.521,3.260,127.741,0.000,0.000,0.000,1.000,1.000,General,6.310,315.521
+ Lights Internal Gains Nominal, 01_C1 LIGHTS 8,MIDRISEAPARTMENT APARTMENT LIGHTDOE,01_C1,113.62,3.4,350.512,3.085,103.396,0.000,0.000,0.000,1.000,1.000,General,7.010,350.512
+ Lights Internal Gains Nominal, 02_C1 LIGHTS 8,MIDRISEAPARTMENT APARTMENT LIGHTDOE,02_C1,113.62,3.4,350.512,3.085,103.396,0.000,0.000,0.000,1.000,1.000,General,7.010,350.512
+ Lights Internal Gains Nominal, 03_C1 LIGHTS 8,MIDRISEAPARTMENT APARTMENT LIGHTDOE,03_C1,113.62,3.4,350.512,3.085,103.396,0.000,0.000,0.000,1.000,1.000,General,7.010,350.512
+! <ElectricEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Nominal Minimum Equipment Level {W},Nominal Maximum Equipment Level {W}
+ ElectricEquipment Internal Gains Nominal, 01_A1 ELECTRIC EQUIPMENT 19,APARTMENTMIDRISE EQP_CLOTHESDRYER,01_A1,57.60,1.6,1699.556,29.506,1096.487,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 02_A1 ELECTRIC EQUIPMENT 19,APARTMENTMIDRISE EQP_CLOTHESDRYER,02_A1,57.60,1.6,1699.556,29.506,1096.487,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 03_A1 ELECTRIC EQUIPMENT 19,APARTMENTMIDRISE EQP_CLOTHESDRYER,03_A1,57.60,1.6,1699.556,29.506,1096.487,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 01_A1 ELECTRIC EQUIPMENT 20,APARTMENTMIDRISE EQP_CLOTHESWASHER,01_A1,57.60,1.6,350.000,6.076,225.806,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 02_A1 ELECTRIC EQUIPMENT 20,APARTMENTMIDRISE EQP_CLOTHESWASHER,02_A1,57.60,1.6,350.000,6.076,225.806,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 03_A1 ELECTRIC EQUIPMENT 20,APARTMENTMIDRISE EQP_CLOTHESWASHER,03_A1,57.60,1.6,350.000,6.076,225.806,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 01_A1 ELECTRIC EQUIPMENT 22,APARTMENTMIDRISE EQP_DISHWASHER,01_A1,57.60,1.6,780.000,13.542,503.226,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 02_A1 ELECTRIC EQUIPMENT 22,APARTMENTMIDRISE EQP_DISHWASHER,02_A1,57.60,1.6,780.000,13.542,503.226,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 03_A1 ELECTRIC EQUIPMENT 22,APARTMENTMIDRISE EQP_DISHWASHER,03_A1,57.60,1.6,780.000,13.542,503.226,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 01_A1 ELECTRIC EQUIPMENT 23,APARTMENTMIDRISE EQP_RANGE,01_A1,57.60,1.6,250.000,4.340,161.290,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 02_A1 ELECTRIC EQUIPMENT 23,APARTMENTMIDRISE EQP_RANGE,02_A1,57.60,1.6,250.000,4.340,161.290,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 03_A1 ELECTRIC EQUIPMENT 23,APARTMENTMIDRISE EQP_RANGE,03_A1,57.60,1.6,250.000,4.340,161.290,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 01_A1 ELECTRIC EQUIPMENT 24,APARTMENTMIDRISE EQP_RANGE,01_A1,57.60,1.6,176.471,3.064,113.852,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 02_A1 ELECTRIC EQUIPMENT 24,APARTMENTMIDRISE EQP_RANGE,02_A1,57.60,1.6,176.471,3.064,113.852,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 03_A1 ELECTRIC EQUIPMENT 24,APARTMENTMIDRISE EQP_RANGE,03_A1,57.60,1.6,176.471,3.064,113.852,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 01_A1 ELECTRIC EQUIPMENT 25,APARTMENTMIDRISE EQP_REFRIGERATOR,01_A1,57.60,1.6,1200.000,20.833,774.194,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 02_A1 ELECTRIC EQUIPMENT 25,APARTMENTMIDRISE EQP_REFRIGERATOR,02_A1,57.60,1.6,1200.000,20.833,774.194,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 03_A1 ELECTRIC EQUIPMENT 25,APARTMENTMIDRISE EQP_REFRIGERATOR,03_A1,57.60,1.6,1200.000,20.833,774.194,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 01_A1 ELECTRIC EQUIPMENT 26,APARTMENTMIDRISE EQP_APT_SCH,01_A1,57.60,1.6,350.000,6.076,225.806,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 02_A1 ELECTRIC EQUIPMENT 26,APARTMENTMIDRISE EQP_APT_SCH,02_A1,57.60,1.6,350.000,6.076,225.806,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 03_A1 ELECTRIC EQUIPMENT 26,APARTMENTMIDRISE EQP_APT_SCH,03_A1,57.60,1.6,350.000,6.076,225.806,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 01_A1 ELECTRIC EQUIPMENT 3,APARTMENTMIDRISE EQP_RANGE,01_A1,57.60,1.6,220.588,3.830,142.315,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 02_A1 ELECTRIC EQUIPMENT 3,APARTMENTMIDRISE EQP_RANGE,02_A1,57.60,1.6,220.588,3.830,142.315,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 03_A1 ELECTRIC EQUIPMENT 3,APARTMENTMIDRISE EQP_RANGE,03_A1,57.60,1.6,220.588,3.830,142.315,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 01_A2 ELECTRIC EQUIPMENT 13,APARTMENTMIDRISE EQP_RANGE,01_A2,62.25,1.6,176.471,2.835,113.852,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 02_A2 ELECTRIC EQUIPMENT 13,APARTMENTMIDRISE EQP_RANGE,02_A2,62.25,1.6,176.471,2.835,113.852,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 03_A2 ELECTRIC EQUIPMENT 13,APARTMENTMIDRISE EQP_RANGE,03_A2,62.25,1.6,176.471,2.835,113.852,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 01_A2 ELECTRIC EQUIPMENT 27,APARTMENTMIDRISE EQP_CLOTHESDRYER,01_A2,62.25,1.6,1699.556,27.304,1096.487,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 02_A2 ELECTRIC EQUIPMENT 27,APARTMENTMIDRISE EQP_CLOTHESDRYER,02_A2,62.25,1.6,1699.556,27.304,1096.487,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 03_A2 ELECTRIC EQUIPMENT 27,APARTMENTMIDRISE EQP_CLOTHESDRYER,03_A2,62.25,1.6,1699.556,27.304,1096.487,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 01_A2 ELECTRIC EQUIPMENT 28,APARTMENTMIDRISE EQP_CLOTHESWASHER,01_A2,62.25,1.6,350.000,5.623,225.806,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 02_A2 ELECTRIC EQUIPMENT 28,APARTMENTMIDRISE EQP_CLOTHESWASHER,02_A2,62.25,1.6,350.000,5.623,225.806,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 03_A2 ELECTRIC EQUIPMENT 28,APARTMENTMIDRISE EQP_CLOTHESWASHER,03_A2,62.25,1.6,350.000,5.623,225.806,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 01_A2 ELECTRIC EQUIPMENT 30,APARTMENTMIDRISE EQP_DISHWASHER,01_A2,62.25,1.6,780.000,12.531,503.226,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 02_A2 ELECTRIC EQUIPMENT 30,APARTMENTMIDRISE EQP_DISHWASHER,02_A2,62.25,1.6,780.000,12.531,503.226,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 03_A2 ELECTRIC EQUIPMENT 30,APARTMENTMIDRISE EQP_DISHWASHER,03_A2,62.25,1.6,780.000,12.531,503.226,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 01_A2 ELECTRIC EQUIPMENT 31,APARTMENTMIDRISE EQP_RANGE,01_A2,62.25,1.6,250.000,4.016,161.290,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 02_A2 ELECTRIC EQUIPMENT 31,APARTMENTMIDRISE EQP_RANGE,02_A2,62.25,1.6,250.000,4.016,161.290,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 03_A2 ELECTRIC EQUIPMENT 31,APARTMENTMIDRISE EQP_RANGE,03_A2,62.25,1.6,250.000,4.016,161.290,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 01_A2 ELECTRIC EQUIPMENT 32,APARTMENTMIDRISE EQP_RANGE,01_A2,62.25,1.6,220.588,3.544,142.315,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 02_A2 ELECTRIC EQUIPMENT 32,APARTMENTMIDRISE EQP_RANGE,02_A2,62.25,1.6,220.588,3.544,142.315,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 03_A2 ELECTRIC EQUIPMENT 32,APARTMENTMIDRISE EQP_RANGE,03_A2,62.25,1.6,220.588,3.544,142.315,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 01_A2 ELECTRIC EQUIPMENT 33,APARTMENTMIDRISE EQP_REFRIGERATOR,01_A2,62.25,1.6,1200.000,19.279,774.194,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 02_A2 ELECTRIC EQUIPMENT 33,APARTMENTMIDRISE EQP_REFRIGERATOR,02_A2,62.25,1.6,1200.000,19.279,774.194,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 03_A2 ELECTRIC EQUIPMENT 33,APARTMENTMIDRISE EQP_REFRIGERATOR,03_A2,62.25,1.6,1200.000,19.279,774.194,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 01_A2 ELECTRIC EQUIPMENT 34,APARTMENTMIDRISE EQP_APT_SCH,01_A2,62.25,1.6,350.000,5.623,225.806,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 02_A2 ELECTRIC EQUIPMENT 34,APARTMENTMIDRISE EQP_APT_SCH,02_A2,62.25,1.6,350.000,5.623,225.806,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 03_A2 ELECTRIC EQUIPMENT 34,APARTMENTMIDRISE EQP_APT_SCH,03_A2,62.25,1.6,350.000,5.623,225.806,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 01_B2 ELECTRIC EQUIPMENT 45,APARTMENTMIDRISE EQP_RANGE,01_B2,96.77,2.5,397.059,4.103,160.753,0.300,0.400,0.000,0.300,General,1.271,397.059
+ ElectricEquipment Internal Gains Nominal, 02_B2 ELECTRIC EQUIPMENT 45,APARTMENTMIDRISE EQP_RANGE,02_B2,96.77,2.5,397.059,4.103,160.753,0.300,0.400,0.000,0.300,General,1.271,397.059
+ ElectricEquipment Internal Gains Nominal, 03_B2 ELECTRIC EQUIPMENT 45,APARTMENTMIDRISE EQP_RANGE,03_B2,96.77,2.5,397.059,4.103,160.753,0.300,0.400,0.000,0.300,General,1.271,397.059
+ ElectricEquipment Internal Gains Nominal, 01_B2 ELECTRIC EQUIPMENT 60,APARTMENTMIDRISE EQP_CLOTHESDRYER,01_B2,96.77,2.5,1699.556,17.562,688.079,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 02_B2 ELECTRIC EQUIPMENT 60,APARTMENTMIDRISE EQP_CLOTHESDRYER,02_B2,96.77,2.5,1699.556,17.562,688.079,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 03_B2 ELECTRIC EQUIPMENT 60,APARTMENTMIDRISE EQP_CLOTHESDRYER,03_B2,96.77,2.5,1699.556,17.562,688.079,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 01_B2 ELECTRIC EQUIPMENT 61,APARTMENTMIDRISE EQP_CLOTHESWASHER,01_B2,96.77,2.5,350.000,3.617,141.700,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 02_B2 ELECTRIC EQUIPMENT 61,APARTMENTMIDRISE EQP_CLOTHESWASHER,02_B2,96.77,2.5,350.000,3.617,141.700,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 03_B2 ELECTRIC EQUIPMENT 61,APARTMENTMIDRISE EQP_CLOTHESWASHER,03_B2,96.77,2.5,350.000,3.617,141.700,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 01_B2 ELECTRIC EQUIPMENT 63,APARTMENTMIDRISE EQP_DISHWASHER,01_B2,96.77,2.5,780.000,8.060,315.789,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 02_B2 ELECTRIC EQUIPMENT 63,APARTMENTMIDRISE EQP_DISHWASHER,02_B2,96.77,2.5,780.000,8.060,315.789,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 03_B2 ELECTRIC EQUIPMENT 63,APARTMENTMIDRISE EQP_DISHWASHER,03_B2,96.77,2.5,780.000,8.060,315.789,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 01_B2 ELECTRIC EQUIPMENT 64,APARTMENTMIDRISE EQP_RANGE,01_B2,96.77,2.5,250.000,2.583,101.215,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 02_B2 ELECTRIC EQUIPMENT 64,APARTMENTMIDRISE EQP_RANGE,02_B2,96.77,2.5,250.000,2.583,101.215,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 03_B2 ELECTRIC EQUIPMENT 64,APARTMENTMIDRISE EQP_RANGE,03_B2,96.77,2.5,250.000,2.583,101.215,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 01_B2 ELECTRIC EQUIPMENT 65,APARTMENTMIDRISE EQP_RANGE,01_B2,96.77,2.5,220.588,2.279,89.307,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 02_B2 ELECTRIC EQUIPMENT 65,APARTMENTMIDRISE EQP_RANGE,02_B2,96.77,2.5,220.588,2.279,89.307,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 03_B2 ELECTRIC EQUIPMENT 65,APARTMENTMIDRISE EQP_RANGE,03_B2,96.77,2.5,220.588,2.279,89.307,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 01_B2 ELECTRIC EQUIPMENT 66,APARTMENTMIDRISE EQP_RANGE,01_B2,96.77,2.5,176.471,1.824,71.446,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 02_B2 ELECTRIC EQUIPMENT 66,APARTMENTMIDRISE EQP_RANGE,02_B2,96.77,2.5,176.471,1.824,71.446,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 03_B2 ELECTRIC EQUIPMENT 66,APARTMENTMIDRISE EQP_RANGE,03_B2,96.77,2.5,176.471,1.824,71.446,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 01_B2 ELECTRIC EQUIPMENT 67,APARTMENTMIDRISE EQP_REFRIGERATOR,01_B2,96.77,2.5,1200.000,12.400,485.830,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 02_B2 ELECTRIC EQUIPMENT 67,APARTMENTMIDRISE EQP_REFRIGERATOR,02_B2,96.77,2.5,1200.000,12.400,485.830,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 03_B2 ELECTRIC EQUIPMENT 67,APARTMENTMIDRISE EQP_REFRIGERATOR,03_B2,96.77,2.5,1200.000,12.400,485.830,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 01_B2 ELECTRIC EQUIPMENT 68,APARTMENTMIDRISE EQP_APT_SCH,01_B2,96.77,2.5,350.000,3.617,141.700,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 02_B2 ELECTRIC EQUIPMENT 68,APARTMENTMIDRISE EQP_APT_SCH,02_B2,96.77,2.5,350.000,3.617,141.700,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 03_B2 ELECTRIC EQUIPMENT 68,APARTMENTMIDRISE EQP_APT_SCH,03_B2,96.77,2.5,350.000,3.617,141.700,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 01_C1 ELECTRIC EQUIPMENT 1,APARTMENTMIDRISE EQP_CLOTHESDRYER,01_C1,113.62,3.4,1699.556,14.958,501.344,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 02_C1 ELECTRIC EQUIPMENT 1,APARTMENTMIDRISE EQP_CLOTHESDRYER,02_C1,113.62,3.4,1699.556,14.958,501.344,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 03_C1 ELECTRIC EQUIPMENT 1,APARTMENTMIDRISE EQP_CLOTHESDRYER,03_C1,113.62,3.4,1699.556,14.958,501.344,5.000E-002,0.150,0.000,0.800,General,3.399,1699.556
+ ElectricEquipment Internal Gains Nominal, 01_C1 ELECTRIC EQUIPMENT 10,APARTMENTMIDRISE EQP_RANGE,01_C1,113.62,3.4,397.059,3.495,117.126,0.300,0.400,0.000,0.300,General,1.271,397.059
+ ElectricEquipment Internal Gains Nominal, 02_C1 ELECTRIC EQUIPMENT 10,APARTMENTMIDRISE EQP_RANGE,02_C1,113.62,3.4,397.059,3.495,117.126,0.300,0.400,0.000,0.300,General,1.271,397.059
+ ElectricEquipment Internal Gains Nominal, 03_C1 ELECTRIC EQUIPMENT 10,APARTMENTMIDRISE EQP_RANGE,03_C1,113.62,3.4,397.059,3.495,117.126,0.300,0.400,0.000,0.300,General,1.271,397.059
+ ElectricEquipment Internal Gains Nominal, 01_C1 ELECTRIC EQUIPMENT 2,APARTMENTMIDRISE EQP_CLOTHESWASHER,01_C1,113.62,3.4,350.000,3.080,103.245,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 02_C1 ELECTRIC EQUIPMENT 2,APARTMENTMIDRISE EQP_CLOTHESWASHER,02_C1,113.62,3.4,350.000,3.080,103.245,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 03_C1 ELECTRIC EQUIPMENT 2,APARTMENTMIDRISE EQP_CLOTHESWASHER,03_C1,113.62,3.4,350.000,3.080,103.245,0.000,0.800,0.000,0.200,General,1.225,350.000
+ ElectricEquipment Internal Gains Nominal, 01_C1 ELECTRIC EQUIPMENT 4,APARTMENTMIDRISE EQP_DISHWASHER,01_C1,113.62,3.4,780.000,6.865,230.088,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 02_C1 ELECTRIC EQUIPMENT 4,APARTMENTMIDRISE EQP_DISHWASHER,02_C1,113.62,3.4,780.000,6.865,230.088,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 03_C1 ELECTRIC EQUIPMENT 4,APARTMENTMIDRISE EQP_DISHWASHER,03_C1,113.62,3.4,780.000,6.865,230.088,0.150,0.600,0.000,0.250,General,2.730,780.000
+ ElectricEquipment Internal Gains Nominal, 01_C1 ELECTRIC EQUIPMENT 5,APARTMENTMIDRISE EQP_RANGE,01_C1,113.62,3.4,220.588,1.941,65.070,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 02_C1 ELECTRIC EQUIPMENT 5,APARTMENTMIDRISE EQP_RANGE,02_C1,113.62,3.4,220.588,1.941,65.070,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 03_C1 ELECTRIC EQUIPMENT 5,APARTMENTMIDRISE EQP_RANGE,03_C1,113.62,3.4,220.588,1.941,65.070,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 01_C1 ELECTRIC EQUIPMENT 53,APARTMENTMIDRISE EQP_RANGE,01_C1,113.62,3.4,220.588,1.941,65.070,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 02_C1 ELECTRIC EQUIPMENT 53,APARTMENTMIDRISE EQP_RANGE,02_C1,113.62,3.4,220.588,1.941,65.070,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 03_C1 ELECTRIC EQUIPMENT 53,APARTMENTMIDRISE EQP_RANGE,03_C1,113.62,3.4,220.588,1.941,65.070,0.300,0.400,0.000,0.300,General,0.706,220.588
+ ElectricEquipment Internal Gains Nominal, 01_C1 ELECTRIC EQUIPMENT 6,APARTMENTMIDRISE EQP_RANGE,01_C1,113.62,3.4,250.000,2.200,73.746,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 02_C1 ELECTRIC EQUIPMENT 6,APARTMENTMIDRISE EQP_RANGE,02_C1,113.62,3.4,250.000,2.200,73.746,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 03_C1 ELECTRIC EQUIPMENT 6,APARTMENTMIDRISE EQP_RANGE,03_C1,113.62,3.4,250.000,2.200,73.746,0.200,0.730,0.000,7.000E-002,General,0.800,250.000
+ ElectricEquipment Internal Gains Nominal, 01_C1 ELECTRIC EQUIPMENT 7,APARTMENTMIDRISE EQP_RANGE,01_C1,113.62,3.4,176.471,1.553,52.056,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 02_C1 ELECTRIC EQUIPMENT 7,APARTMENTMIDRISE EQP_RANGE,02_C1,113.62,3.4,176.471,1.553,52.056,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 03_C1 ELECTRIC EQUIPMENT 7,APARTMENTMIDRISE EQP_RANGE,03_C1,113.62,3.4,176.471,1.553,52.056,0.300,0.400,0.000,0.300,General,0.565,176.471
+ ElectricEquipment Internal Gains Nominal, 01_C1 ELECTRIC EQUIPMENT 8,APARTMENTMIDRISE EQP_REFRIGERATOR,01_C1,113.62,3.4,1200.000,10.561,353.982,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 02_C1 ELECTRIC EQUIPMENT 8,APARTMENTMIDRISE EQP_REFRIGERATOR,02_C1,113.62,3.4,1200.000,10.561,353.982,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 03_C1 ELECTRIC EQUIPMENT 8,APARTMENTMIDRISE EQP_REFRIGERATOR,03_C1,113.62,3.4,1200.000,10.561,353.982,0.000,1.000,0.000,0.000,General,43.476,1200.000
+ ElectricEquipment Internal Gains Nominal, 01_C1 ELECTRIC EQUIPMENT 9,APARTMENTMIDRISE EQP_APT_SCH,01_C1,113.62,3.4,350.000,3.080,103.245,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 02_C1 ELECTRIC EQUIPMENT 9,APARTMENTMIDRISE EQP_APT_SCH,02_C1,113.62,3.4,350.000,3.080,103.245,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+ ElectricEquipment Internal Gains Nominal, 03_C1 ELECTRIC EQUIPMENT 9,APARTMENTMIDRISE EQP_APT_SCH,03_C1,113.62,3.4,350.000,3.080,103.245,0.200,0.730,0.000,7.000E-002,General,8.540,350.000
+! <Shadowing/Sun Position Calculations Annual Simulations>, Calculation Method, Value {days}, Allowable Number Figures in Shadow Overlap {}, Polygon Clipping Algorithm, Sky Diffuse Modeling Algorithm, External Shading Calculation Method, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
+Shadowing/Sun Position Calculations Annual Simulations,AverageOverDaysInFrequency,20,15000,SutherlandHodgman,SimpleSkyDiffuseModeling,InternalCalculation,No,No,No
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,01_A1,Mixing/Well-Stirred
+RoomAir Model,01_A2,Mixing/Well-Stirred
+RoomAir Model,01_B2,Mixing/Well-Stirred
+RoomAir Model,01_C1,Mixing/Well-Stirred
+RoomAir Model,02_A1,Mixing/Well-Stirred
+RoomAir Model,02_A2,Mixing/Well-Stirred
+RoomAir Model,02_B2,Mixing/Well-Stirred
+RoomAir Model,02_C1,Mixing/Well-Stirred
+RoomAir Model,03_A1,Mixing/Well-Stirred
+RoomAir Model,03_A2,Mixing/Well-Stirred
+RoomAir Model,03_B2,Mixing/Well-Stirred
+RoomAir Model,03_C1,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,NoMultizoneOrDistribution
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Zone Sizing DOAS Inputs>, Zone Name, DOAS Design Control Strategy, DOAS Design Low Setpoint Temperature {C}, DOAS Design High Setpoint Temperature {C} 
+ Zone Sizing DOAS Inputs, 01_A1, NeutralSupplyAir, 21.100, 23.900
+! <Load Timesteps in Zone Design Calculation Averaging Window>, Value
+ Load Timesteps in Zone Design Calculation Averaging Window,    6
+! <Heating Sizing Factor Information>, Sizing Factor ID, Value
+ Heating Sizing Factor Information, Global,   1.2500    
+ Heating Sizing Factor Information, Zone 01_A1,   1.2500    
+ Heating Sizing Factor Information, Zone 01_A2,   1.2500    
+ Heating Sizing Factor Information, Zone 01_B2,   1.2500    
+ Heating Sizing Factor Information, Zone 01_C1,   1.2500    
+ Heating Sizing Factor Information, Zone 02_A1,   1.2500    
+ Heating Sizing Factor Information, Zone 02_A2,   1.2500    
+ Heating Sizing Factor Information, Zone 02_B2,   1.2500    
+ Heating Sizing Factor Information, Zone 02_C1,   1.2500    
+ Heating Sizing Factor Information, Zone 03_A1,   1.2500    
+ Heating Sizing Factor Information, Zone 03_A2,   1.2500    
+ Heating Sizing Factor Information, Zone 03_B2,   1.2500    
+ Heating Sizing Factor Information, Zone 03_C1,   1.2500    
+! <Cooling Sizing Factor Information>, Sizing Factor ID, Value
+ Cooling Sizing Factor Information, Global,   1.1500    
+ Cooling Sizing Factor Information, Zone 01_A1,   1.1500    
+ Cooling Sizing Factor Information, Zone 01_A2,   1.1500    
+ Cooling Sizing Factor Information, Zone 01_B2,   1.1500    
+ Cooling Sizing Factor Information, Zone 01_C1,   1.1500    
+ Cooling Sizing Factor Information, Zone 02_A1,   1.1500    
+ Cooling Sizing Factor Information, Zone 02_A2,   1.1500    
+ Cooling Sizing Factor Information, Zone 02_B2,   1.1500    
+ Cooling Sizing Factor Information, Zone 02_C1,   1.1500    
+ Cooling Sizing Factor Information, Zone 03_A1,   1.1500    
+ Cooling Sizing Factor Information, Zone 03_A2,   1.1500    
+ Cooling Sizing Factor Information, Zone 03_B2,   1.1500    
+ Cooling Sizing Factor Information, Zone 03_C1,   1.1500    
+! <Zone Sizing Information>, Zone Name, Load Type, Calc Des Load {W}, User Des Load {W}, Calc Des Air Flow Rate {m3/s}, User Des Air Flow Rate {m3/s}, Design Day Name, Date/Time of Peak, Temperature at Peak {C}, Humidity Ratio at Peak {kgWater/kgDryAir}, Floor Area {m2}, # Occupants, Calc Outdoor Air Flow Rate {m3/s}, Calc DOAS Heat Addition Rate {W}
+ Zone Sizing Information, 01_A1, Cooling, 2888.32746, 3321.57658, 0.17025, 0.19578, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 57.59988, 1.55000, 2.35974E-002, -66.78904
+ Zone Sizing Information, 01_A1, Heating, 25.11708, 31.39635, 1.85544E-003, 2.35974E-002, ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB, 1/21 01:40:00, -23.70000, 2.37546E-004, 57.59988, 1.55000, 2.35974E-002, -66.40649
+ Zone Sizing Information, 01_A2, Cooling, 3669.22772, 4219.61188, 0.21633, 0.24878, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 62.24504, 1.55000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 01_A2, Heating, 0.00000, 0.00000, 0.00000, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, , -26.00000, 3.54096E-004, 62.24504, 1.55000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 01_B2, Cooling, 3791.76895, 4360.53430, 0.22354, 0.25708, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 96.77400, 2.47000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 01_B2, Heating, 141.23549, 176.54436, 8.33271E-003, 2.35974E-002, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 05:00:00, -26.00000, 3.54096E-004, 96.77400, 2.47000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 01_C1, Cooling, 2842.30087, 3268.64600, 0.16757, 0.19270, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 113.62042, 3.39000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 01_C1, Heating, 101.74354, 127.17943, 6.00256E-003, 2.35974E-002, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 05:00:00, -26.00000, 3.54096E-004, 113.62042, 3.39000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 02_A1, Cooling, 4487.79665, 5160.96615, 0.26459, 0.30428, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 57.59988, 1.55000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 02_A1, Heating, 0.00000, 0.00000, 0.00000, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, , -26.00000, 3.54096E-004, 57.59988, 1.55000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 02_A2, Cooling, 5488.08492, 6311.29766, 0.32356, 0.37210, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 62.24504, 1.55000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 02_A2, Heating, 0.00000, 0.00000, 0.00000, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, , -26.00000, 3.54096E-004, 62.24504, 1.55000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 02_B2, Cooling, 6252.36041, 7190.21447, 0.36861, 0.42390, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 96.77400, 2.47000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 02_B2, Heating, 0.00000, 0.00000, 0.00000, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, , -26.00000, 3.54096E-004, 96.77400, 2.47000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 02_C1, Cooling, 5474.43380, 6295.59887, 0.32274, 0.37116, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 113.62042, 3.39000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 02_C1, Heating, 0.00000, 0.00000, 0.00000, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, , -26.00000, 3.54096E-004, 113.62042, 3.39000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 03_A1, Cooling, 4717.02441, 5424.57807, 0.27811, 0.31983, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 57.59988, 1.55000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 03_A1, Heating, 0.00000, 0.00000, 0.00000, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, , -26.00000, 3.54096E-004, 57.59988, 1.55000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 03_A2, Cooling, 5724.80005, 6583.52006, 0.33752, 0.38815, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 62.24504, 1.55000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 03_A2, Heating, 0.00000, 0.00000, 0.00000, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, , -26.00000, 3.54096E-004, 62.24504, 1.55000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 03_B2, Cooling, 6682.94041, 7685.38148, 0.39399, 0.45309, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 96.77400, 2.47000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 03_B2, Heating, 0.00000, 0.00000, 0.00000, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, , -26.00000, 3.54096E-004, 96.77400, 2.47000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 03_C1, Cooling, 5804.78697, 6675.50502, 0.34222, 0.39355, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 19:00:00, 20.27500, 7.02465E-003, 113.62042, 3.39000, 2.35974E-002, 0.00000
+ Zone Sizing Information, 03_C1, Heating, 0.00000, 0.00000, 0.00000, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, , -26.00000, 3.54096E-004, 113.62042, 3.39000, 2.35974E-002, 0.00000
+! <System Sizing Information>, System Name, Load Type, Peak Load Kind, User Design Capacity, Calc Des Air Flow Rate [m3/s], User Des Air Flow Rate [m3/s], Design Day Name, Date/Time of Peak
+ System Sizing Information, AIR LOOP HVAC 1, Cooling, Sensible, 1758.71, 0.19578, 0.19578, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 1, Heating, Sensible, 1145.64, 2.35974E-002, 2.35974E-002, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 00:10:00
+ System Sizing Information, AIR LOOP HVAC 10, Cooling, Sensible, 3486.67, 0.38815, 0.38815, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 10, Heating, Sensible, 16661.45, 0.32470, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 00:10:00
+ System Sizing Information, AIR LOOP HVAC 11, Cooling, Sensible, 4070.05, 0.45309, 0.45309, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 11, Heating, Sensible, 16661.45, 0.32470, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 00:10:00
+ System Sizing Information, AIR LOOP HVAC 12, Cooling, Sensible, 3535.22, 0.39355, 0.39355, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 12, Heating, Sensible, 16661.45, 0.32470, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 00:10:00
+ System Sizing Information, AIR LOOP HVAC 2, Cooling, Sensible, 2234.78, 0.24878, 0.24878, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 2, Heating, Sensible, 16661.45, 0.32470, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 00:10:00
+ System Sizing Information, AIR LOOP HVAC 3, Cooling, Sensible, 2309.27, 0.25708, 0.25708, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 3, Heating, Sensible, 1210.86, 2.35974E-002, 2.35974E-002, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 03:20:00
+ System Sizing Information, AIR LOOP HVAC 4, Cooling, Sensible, 1731.03, 0.19270, 0.19270, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 4, Heating, Sensible, 1210.86, 2.35974E-002, 2.35974E-002, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 04:20:00
+ System Sizing Information, AIR LOOP HVAC 5, Cooling, Sensible, 2733.34, 0.30428, 0.30428, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 5, Heating, Sensible, 16661.45, 0.32470, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 00:10:00
+ System Sizing Information, AIR LOOP HVAC 6, Cooling, Sensible, 3342.49, 0.37210, 0.37210, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 6, Heating, Sensible, 16661.45, 0.32470, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 00:10:00
+ System Sizing Information, AIR LOOP HVAC 7, Cooling, Sensible, 3807.83, 0.42390, 0.42390, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 7, Heating, Sensible, 16661.45, 0.32470, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 00:10:00
+ System Sizing Information, AIR LOOP HVAC 8, Cooling, Sensible, 3334.03, 0.37116, 0.37116, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 8, Heating, Sensible, 16661.45, 0.32470, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 00:10:00
+ System Sizing Information, AIR LOOP HVAC 9, Cooling, Sensible, 2872.95, 0.31983, 0.31983, ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB, 7/21 05:00:00
+ System Sizing Information, AIR LOOP HVAC 9, Heating, Sensible, 16661.45, 0.32470, 0.32470, ANCHORAGEELMENDORFANNHTG99.6CONDNSDB, 1/21 00:10:00
+! <Component Sizing Information>, Component Type, Component Name, Input Field Description, Value
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER, Design Size Maximum Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 1, Design Size Maximum Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 2, Design Size Maximum Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 3, Design Size Maximum Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 4, Design Size Maximum Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 5, Design Size Maximum Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 11, Design Size Maximum Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 6, Design Size Maximum Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 7, Design Size Maximum Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 8, Design Size Maximum Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 9, Design Size Maximum Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, AirTerminal:SingleDuct:Uncontrolled, DIFFUSER 10, Design Size Maximum Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 1, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 1, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 1, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 1, Adjusted Heating Design Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 1, Adjusted Cooling Design Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 1, Adjusted Main Design Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 1, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 1, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 10, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 10, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 10, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 10, Adjusted Heating Design Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 10, Adjusted Cooling Design Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 10, Adjusted Main Design Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 10, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 10, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 11, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 11, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 11, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 11, Adjusted Heating Design Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 11, Adjusted Cooling Design Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 11, Adjusted Main Design Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 11, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 11, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 12, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 12, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 12, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 12, Adjusted Heating Design Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 12, Adjusted Cooling Design Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 12, Adjusted Main Design Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 12, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 12, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 2, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 2, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 2, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 2, Adjusted Heating Design Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 2, Adjusted Cooling Design Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 2, Adjusted Main Design Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 2, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 2, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 3, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 3, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 3, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 3, Adjusted Heating Design Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 3, Adjusted Cooling Design Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 3, Adjusted Main Design Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 3, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 3, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 4, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 4, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 4, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 4, Adjusted Heating Design Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 4, Adjusted Cooling Design Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 4, Adjusted Main Design Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 4, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 4, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 5, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 5, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 5, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 5, Adjusted Heating Design Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 5, Adjusted Cooling Design Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 5, Adjusted Main Design Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 5, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 5, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 6, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 6, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 6, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 6, Adjusted Heating Design Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 6, Adjusted Cooling Design Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 6, Adjusted Main Design Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 6, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 6, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 7, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 7, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 7, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 7, Adjusted Heating Design Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 7, Adjusted Cooling Design Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 7, Adjusted Main Design Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 7, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 7, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 8, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 8, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 8, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 8, Adjusted Heating Design Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 8, Adjusted Cooling Design Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 8, Adjusted Main Design Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 8, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 8, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 9, Sum of Air Terminal Maximum Heating Flow Rates [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 9, Sum of Air Terminal Minimum Heating Flow Rates [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 9, Sum of Air Terminal Maximum Flow Rates [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 9, Adjusted Heating Design Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 9, Adjusted Cooling Design Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 9, Adjusted Main Design Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 9, User Heating Air Flow Ratio [], 0.30000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 9, Calculated Heating Air Flow Ratio [], 1.00000
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 1, Design Supply Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 10, Design Supply Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 11, Design Supply Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 12, Design Supply Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 2, Design Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 3, Design Supply Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 4, Design Supply Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 5, Design Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 6, Design Supply Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 7, Design Supply Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 8, Design Supply Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC, AIR LOOP HVAC 9, Design Supply Air Flow Rate [m3/s], 0.32470
+!<Controller:MechanicalVentilation>,Name,Availability Schedule Name,Demand Controlled Ventilation {Yes/No},System Outdoor Air Method,Zone Maximum Outdoor Air Fraction,Number of Zones,Zone Name,DSOA Name,DSZAD Name
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 1,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,01_A1,HVAC_OA,01_A1 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 2,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,01_A2,HVAC_OA,01_A2 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 3,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,01_B2,HVAC_OA,01_B2 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 4,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,01_C1,HVAC_OA,01_C1 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 5,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,02_A1,HVAC_OA,02_A1 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 6,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,02_A2,HVAC_OA,02_A2 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 7,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,02_B2,HVAC_OA,02_B2 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 8,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,02_C1,HVAC_OA,02_C1 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 9,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,03_A1,HVAC_OA,03_A1 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 10,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,03_A2,HVAC_OA,03_A2 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 11,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,03_B2,HVAC_OA,03_B2 DESIGN SPEC ZONE AIR DIST
+ Controller:MechanicalVentilation,CONTROLLER MECHANICAL VENTILATION 12,ALWAYS ON DISCRETE HVAC_LIBRARY,No,ZoneSum,1.00,1,03_C1,HVAC_OA,03_C1 DESIGN SPEC ZONE AIR DIST
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER, Maximum Outdoor Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, Design Size Supply Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, Design Size Heating Supply Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, Design Size Cooling Supply Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, Design Size No Load Supply Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, Design Size Nominal Cooling Capacity [W], 4861.80475
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, Design Size Nominal Heating Capacity [W], 4861.80475
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, Design Size Supplemental Heating Coil Nominal Capacity [W], 4861.80475
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, User-Specified Supplemental Heating Coil Nominal Capacity [W], 4861.80475
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 5, Design Size Maximum Flow Rate [m3/s], 0.19578
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 4, Design Size Rated Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 4, Design Size Gross Rated Total Cooling Capacity [W], 4861.80475
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 4, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+! <DX Cooling Coil Standard Rating Information>, Component Type, Component Name, Standard Rating (Net) Cooling Capacity {W}, Standard Rated Net COP {W/W}, EER {Btu/W-h}, SEER {Btu/W-h}, IEER {Btu/W-h}
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 4, 4707.3, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 3, Design Size Rated Air Flow Rate [m3/s], 0.19578
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 3, Design Size Gross Rated Heating Capacity [W], 4861.80475
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 3, Design Size Resistive Defrost Heater Capacity [W], 4861.80475
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 3, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+! <DX Heating Coil Standard Rating Information>, Component Type, Component Name, High Temperature Heating (net) Rating Capacity {W}, Low Temperature Heating (net) Rating Capacity {W}, HSPF {Btu/W-h}, Region Number
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 3, 5019.1, 2761.8, 6.53, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 5, Design Size Nominal Capacity [W], 4861.80475
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 9, Maximum Outdoor Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 9, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, Design Size Supply Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, Design Size Heating Supply Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, Design Size Cooling Supply Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, Design Size No Load Supply Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, Design Size Nominal Cooling Capacity [W], 9638.61459
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, Design Size Nominal Heating Capacity [W], 9638.61459
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, Design Size Supplemental Heating Coil Nominal Capacity [W], 9638.61459
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, User-Specified Supplemental Heating Coil Nominal Capacity [W], 9638.61459
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 14, Design Size Maximum Flow Rate [m3/s], 0.38815
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 13, Design Size Rated Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 13, Design Size Gross Rated Total Cooling Capacity [W], 9638.61459
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 13, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 13, 9332.4, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 12, Design Size Rated Air Flow Rate [m3/s], 0.38815
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 12, Design Size Gross Rated Heating Capacity [W], 9638.61459
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 12, Design Size Resistive Defrost Heater Capacity [W], 9638.61459
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 12, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 12, 9950.5, 5475.3, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 14, Design Size Nominal Capacity [W], 9638.61459
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 10, Maximum Outdoor Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 10, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, Design Size Supply Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, Design Size Heating Supply Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, Design Size Cooling Supply Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, Design Size No Load Supply Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, Design Size Nominal Cooling Capacity [W], 11251.34830
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, Design Size Nominal Heating Capacity [W], 11251.34830
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, Design Size Supplemental Heating Coil Nominal Capacity [W], 11251.34830
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, User-Specified Supplemental Heating Coil Nominal Capacity [W], 11251.34830
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 15, Design Size Maximum Flow Rate [m3/s], 0.45309
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 14, Design Size Rated Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 14, Design Size Gross Rated Total Cooling Capacity [W], 11251.34830
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 14, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 14, 10893.9, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 13, Design Size Rated Air Flow Rate [m3/s], 0.45309
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 13, Design Size Gross Rated Heating Capacity [W], 11251.34830
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 13, Design Size Resistive Defrost Heater Capacity [W], 11251.34830
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 13, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 13, 11615.4, 6391.4, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 15, Design Size Nominal Capacity [W], 11251.34830
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 11, Maximum Outdoor Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 11, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, Design Size Supply Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, Design Size Heating Supply Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, Design Size Cooling Supply Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, Design Size No Load Supply Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, Design Size Nominal Cooling Capacity [W], 9772.82988
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, Design Size Nominal Heating Capacity [W], 9772.82988
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, Design Size Supplemental Heating Coil Nominal Capacity [W], 9772.82988
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, User-Specified Supplemental Heating Coil Nominal Capacity [W], 9772.82988
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 16, Design Size Maximum Flow Rate [m3/s], 0.39355
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 15, Design Size Rated Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 15, Design Size Gross Rated Total Cooling Capacity [W], 9772.82988
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 15, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 15, 9462.4, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 14, Design Size Rated Air Flow Rate [m3/s], 0.39355
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 14, Design Size Gross Rated Heating Capacity [W], 9772.82988
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 14, Design Size Resistive Defrost Heater Capacity [W], 9772.82988
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 14, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 14, 10089.0, 5551.5, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 16, Design Size Nominal Capacity [W], 9772.82988
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 1, Maximum Outdoor Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 1, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, Design Size Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, Design Size Heating Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, Design Size Cooling Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, Design Size No Load Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, Design Size Nominal Cooling Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, Design Size Nominal Heating Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, Design Size Supplemental Heating Coil Nominal Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, User-Specified Supplemental Heating Coil Nominal Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 6, Design Size Maximum Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 5, Design Size Rated Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 5, Design Size Gross Rated Total Cooling Capacity [W], 8063.07030
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 5, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 5, 7806.9, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 4, Design Size Rated Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 4, Design Size Gross Rated Heating Capacity [W], 8063.07030
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 4, Design Size Resistive Defrost Heater Capacity [W], 8063.07030
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 4, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 4, 8323.9, 4580.3, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 6, Design Size Nominal Capacity [W], 8063.07030
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 2, Maximum Outdoor Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 2, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, Design Size Supply Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, Design Size Heating Supply Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, Design Size Cooling Supply Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, Design Size No Load Supply Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, Design Size Nominal Cooling Capacity [W], 6383.79600
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, Design Size Nominal Heating Capacity [W], 6383.79600
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, Design Size Supplemental Heating Coil Nominal Capacity [W], 6383.79600
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, User-Specified Supplemental Heating Coil Nominal Capacity [W], 6383.79600
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 7, Design Size Maximum Flow Rate [m3/s], 0.25708
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 6, Design Size Rated Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 6, Design Size Gross Rated Total Cooling Capacity [W], 6383.79600
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 6, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 6, 6181.0, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 5, Design Size Rated Air Flow Rate [m3/s], 0.25708
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 5, Design Size Gross Rated Heating Capacity [W], 6383.79600
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 5, Design Size Resistive Defrost Heater Capacity [W], 6383.79600
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 5, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 5, 6590.3, 3626.4, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 7, Design Size Nominal Capacity [W], 6383.79600
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 3, Maximum Outdoor Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 3, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, Design Size Supply Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, Design Size Heating Supply Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, Design Size Cooling Supply Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, Design Size No Load Supply Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, Design Size Nominal Cooling Capacity [W], 4785.28906
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, Design Size Nominal Heating Capacity [W], 4785.28906
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, Design Size Supplemental Heating Coil Nominal Capacity [W], 4785.28906
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, User-Specified Supplemental Heating Coil Nominal Capacity [W], 4785.28906
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 8, Design Size Maximum Flow Rate [m3/s], 0.19270
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 7, Design Size Rated Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 7, Design Size Gross Rated Total Cooling Capacity [W], 4785.28906
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 7, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 7, 4633.3, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 6, Design Size Rated Air Flow Rate [m3/s], 0.19270
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 6, Design Size Gross Rated Heating Capacity [W], 4785.28906
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 6, Design Size Resistive Defrost Heater Capacity [W], 4785.28906
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 6, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 6, 4940.1, 2718.3, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 8, Design Size Nominal Capacity [W], 4785.28906
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 4, Maximum Outdoor Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 4, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, Design Size Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, Design Size Heating Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, Design Size Cooling Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, Design Size No Load Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, Design Size Nominal Cooling Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, Design Size Nominal Heating Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, Design Size Supplemental Heating Coil Nominal Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, User-Specified Supplemental Heating Coil Nominal Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 9, Design Size Maximum Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 8, Design Size Rated Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 8, Design Size Gross Rated Total Cooling Capacity [W], 8063.07030
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 8, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 8, 7806.9, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 7, Design Size Rated Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 7, Design Size Gross Rated Heating Capacity [W], 8063.07030
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 7, Design Size Resistive Defrost Heater Capacity [W], 8063.07030
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 7, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 7, 8323.9, 4580.3, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 9, Design Size Nominal Capacity [W], 8063.07030
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 5, Maximum Outdoor Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 5, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, Design Size Supply Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, Design Size Heating Supply Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, Design Size Cooling Supply Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, Design Size No Load Supply Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, Design Size Nominal Cooling Capacity [W], 9240.04799
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, Design Size Nominal Heating Capacity [W], 9240.04799
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, Design Size Supplemental Heating Coil Nominal Capacity [W], 9240.04799
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, User-Specified Supplemental Heating Coil Nominal Capacity [W], 9240.04799
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 10, Design Size Maximum Flow Rate [m3/s], 0.37210
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 9, Design Size Rated Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 9, Design Size Gross Rated Total Cooling Capacity [W], 9240.04799
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 9, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 9, 8946.5, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 8, Design Size Rated Air Flow Rate [m3/s], 0.37210
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 8, Design Size Gross Rated Heating Capacity [W], 9240.04799
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 8, Design Size Resistive Defrost Heater Capacity [W], 9240.04799
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 8, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 8, 9539.0, 5248.9, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 10, Design Size Nominal Capacity [W], 9240.04799
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 6, Maximum Outdoor Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 6, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, Design Size Supply Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, Design Size Heating Supply Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, Design Size Cooling Supply Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, Design Size No Load Supply Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, Design Size Nominal Cooling Capacity [W], 10526.43700
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, Design Size Nominal Heating Capacity [W], 10526.43700
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, Design Size Supplemental Heating Coil Nominal Capacity [W], 10526.43700
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, User-Specified Supplemental Heating Coil Nominal Capacity [W], 10526.43700
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 11, Design Size Maximum Flow Rate [m3/s], 0.42390
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 10, Design Size Rated Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 10, Design Size Gross Rated Total Cooling Capacity [W], 10526.43700
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 10, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 10, 10192.0, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 9, Design Size Rated Air Flow Rate [m3/s], 0.42390
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 9, Design Size Gross Rated Heating Capacity [W], 10526.43700
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 9, Design Size Resistive Defrost Heater Capacity [W], 10526.43700
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 9, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 9, 10867.0, 5979.6, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 11, Design Size Nominal Capacity [W], 10526.43700
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 7, Maximum Outdoor Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 7, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, Design Size Supply Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, Design Size Heating Supply Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, Design Size Cooling Supply Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, Design Size No Load Supply Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, Design Size Nominal Cooling Capacity [W], 9216.66405
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, Design Size Nominal Heating Capacity [W], 9216.66405
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, Design Size Supplemental Heating Coil Nominal Capacity [W], 9216.66405
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, User-Specified Supplemental Heating Coil Nominal Capacity [W], 9216.66405
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 12, Design Size Maximum Flow Rate [m3/s], 0.37116
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 11, Design Size Rated Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 11, Design Size Gross Rated Total Cooling Capacity [W], 9216.66405
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 11, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 11, 8923.9, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 10, Design Size Rated Air Flow Rate [m3/s], 0.37116
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 10, Design Size Gross Rated Heating Capacity [W], 9216.66405
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 10, Design Size Resistive Defrost Heater Capacity [W], 9216.66405
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 10, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 10, 9514.9, 5235.6, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 12, Design Size Nominal Capacity [W], 9216.66405
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 8, Maximum Outdoor Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Controller:OutdoorAir, OUTDOOR AIR CONTROLLER 8, Minimum Outdoor Air Flow Rate [m3/s], 2.35974E-002
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, Design Size Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, Design Size Heating Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, Design Size Cooling Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, Design Size No Load Supply Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, Design Size Nominal Cooling Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, Design Size Nominal Heating Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, Design Size Maximum Supply Air Temperature [C], 16.70000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, User-Specified Maximum Supply Air Temperature [C], 80.00000
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, Design Size Supplemental Heating Coil Nominal Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, User-Specified Supplemental Heating Coil Nominal Capacity [W], 8063.07030
+ Component Sizing Information, AirLoopHVAC:UnitarySystem, UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8, Fraction of Supply Air Flow That Goes Through the Controlling Zone, 1.00000
+ Component Sizing Information, Fan:OnOff, FAN ON OFF 13, Design Size Maximum Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 12, Design Size Rated Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 12, Design Size Gross Rated Total Cooling Capacity [W], 8063.07030
+ Component Sizing Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 12, Design Size Gross Rated Sensible Heat Ratio, 0.69808
+ DX Cooling Coil Standard Rating Information, Coil:Cooling:DX:SingleSpeed, 1 SPD DX CLG COIL 12, 7806.9, 3.07, 10.47, 10.41, 10.78
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 11, Design Size Rated Air Flow Rate [m3/s], 0.32470
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 11, Design Size Gross Rated Heating Capacity [W], 8063.07030
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 11, Design Size Resistive Defrost Heater Capacity [W], 8063.07030
+ Component Sizing Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 11, User-Specified Resistive Defrost Heater Capacity [W], 2000.00000
+ DX Heating Coil Standard Rating Information, Coil:Heating:DX:SingleSpeed, 1 SPD DX HTG COIL 11, 8323.9, 4580.3, 6.54, 4
+ Component Sizing Information, Coil:Heating:Electric, ELEC HTG COIL 13, Design Size Nominal Capacity [W], 8063.07030
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values
+! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
+! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
+! <Environment:WarmupDays>, NumberofWarmupDays
+Environment,ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+! <Environment:Design Day Data>, Max Dry-Bulb Temp {C}, Temp Range {dC}, Temp Range Ind Type, Hum Ind Value at Max Temp, Hum Ind Type,Pressure {Pa}, Wind Direction {deg CW from N}, Wind Speed {m/s}, Clearness, Rain, Snow
+! <Environment:Design Day Misc>,DayOfYear,ASHRAE A Coeff,ASHRAE B Coeff,ASHRAE C Coeff,Solar Constant-Annual Variation,Eq of Time {minutes}, Solar Declination Angle {deg}, Solar Model
+Environment:Design Day Data,23.20,7.50,DefaultMultipliers,100618,260,3.8,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau
+Environment:WarmupDays,  6
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,01_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,5.5930260292E-005,1.1800151803E-004,Pass,Pass,3.4406474845E-002,6.5335606423E-002,Pass,Pass
+ Warmup Convergence Information,01_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,4.0309548226E-005,8.1688069490E-005,Pass,Pass,2.5575419360E-002,5.1747883255E-002,Pass,Pass
+ Warmup Convergence Information,01_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,6.8305167880E-003,1.7967545393E-002,Pass,Pass,6.7970836798E-002,0.2060444171,Pass,Pass
+ Warmup Convergence Information,01_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,1.0315086077E-002,2.8211232673E-002,Pass,Pass,7.6807915793E-002,0.3902213916,Pass,Pass
+ Warmup Convergence Information,02_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,3.4022028484E-005,6.0711289641E-005,Pass,Pass,1.7455197992E-002,2.9885853158E-002,Pass,Pass
+ Warmup Convergence Information,02_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,4.2002284739E-005,7.0247152677E-005,Pass,Pass,1.6785307805E-002,2.7432371262E-002,Pass,Pass
+ Warmup Convergence Information,02_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,2.7008430000E-005,4.6464920081E-005,Pass,Pass,1.9123738971E-002,2.9338742323E-002,Pass,Pass
+ Warmup Convergence Information,02_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,3.5556478831E-005,5.5443017547E-005,Pass,Pass,2.0047691332E-002,3.0275898019E-002,Pass,Pass
+ Warmup Convergence Information,03_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,3.3959627701E-005,6.3564124939E-005,Pass,Pass,1.8947031100E-002,3.3424038051E-002,Pass,Pass
+ Warmup Convergence Information,03_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,2.6949486051E-005,5.0854426969E-005,Pass,Pass,1.7781131699E-002,3.1564864329E-002,Pass,Pass
+ Warmup Convergence Information,03_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,2.5220972653E-005,4.4439679111E-005,Pass,Pass,2.0737091204E-002,3.2754565737E-002,Pass,Pass
+ Warmup Convergence Information,03_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDBMWB,3.4284435664E-005,5.4648009387E-005,Pass,Pass,2.1647279260E-002,3.3597135071E-002,Pass,Pass
+Environment,ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,16.40,7.50,DefaultMultipliers,100618,260,3.8,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau
+Environment:WarmupDays,  6
+ Warmup Convergence Information,01_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,1.0670420663E-003,4.1748434160E-003,Pass,Pass,3.7857189076E-002,7.5784529295E-002,Pass,Pass
+ Warmup Convergence Information,01_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,4.6723994344E-005,9.8449454399E-005,Pass,Pass,2.7798956733E-002,5.6723880560E-002,Pass,Pass
+ Warmup Convergence Information,01_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,1.7773529359E-002,3.2593826613E-002,Pass,Pass,4.7740593611E-002,0.1410582098,Pass,Pass
+ Warmup Convergence Information,01_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,1.9963077574E-002,4.3967782656E-002,Pass,Pass,4.5165802872E-002,0.1186210821,Pass,Pass
+ Warmup Convergence Information,02_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,3.4394457163E-005,7.1324466925E-005,Pass,Pass,1.8426178130E-002,3.1529503204E-002,Pass,Pass
+ Warmup Convergence Information,02_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,4.3535794425E-005,8.1943758417E-005,Pass,Pass,1.7845078166E-002,2.9181009444E-002,Pass,Pass
+ Warmup Convergence Information,02_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,2.7522674119E-005,5.2911535838E-005,Pass,Pass,2.1116094607E-002,3.2204534727E-002,Pass,Pass
+ Warmup Convergence Information,02_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,3.6149617849E-005,6.2359758272E-005,Pass,Pass,2.2044708985E-002,3.3227942297E-002,Pass,Pass
+ Warmup Convergence Information,03_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,3.5219623571E-005,7.4553883607E-005,Pass,Pass,2.0281113624E-002,3.5817469020E-002,Pass,Pass
+ Warmup Convergence Information,03_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,2.8016609012E-005,5.9020159315E-005,Pass,Pass,1.9385510506E-002,3.4561735734E-002,Pass,Pass
+ Warmup Convergence Information,03_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,2.5849893831E-005,5.0327462237E-005,Pass,Pass,2.3268012899E-002,3.6938735052E-002,Pass,Pass
+ Warmup Convergence Information,03_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSDPMDB,3.5359672297E-005,6.1429279666E-005,Pass,Pass,2.4246635850E-002,3.7935484788E-002,Pass,Pass
+Environment,ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,21.30,7.50,DefaultMultipliers,100618,260,3.8,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau
+Environment:WarmupDays,  6
+ Warmup Convergence Information,01_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,8.4598608613E-005,1.8107855052E-004,Pass,Pass,3.5657112578E-002,6.7608100900E-002,Pass,Pass
+ Warmup Convergence Information,01_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,5.9919810661E-005,1.2669819224E-004,Pass,Pass,2.6088914382E-002,5.2897867685E-002,Pass,Pass
+ Warmup Convergence Information,01_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,9.7535405372E-003,2.1751717426E-002,Pass,Pass,5.9951213219E-002,0.1933076953,Pass,Pass
+ Warmup Convergence Information,01_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,1.2942224421E-002,3.2986163431E-002,Pass,Pass,6.0539252894E-002,0.2393517920,Pass,Pass
+ Warmup Convergence Information,02_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,4.2776886467E-005,9.0501701207E-005,Pass,Pass,1.7696937126E-002,3.0302548486E-002,Pass,Pass
+ Warmup Convergence Information,02_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,5.2817629607E-005,1.0491364650E-004,Pass,Pass,1.7053715751E-002,2.7875585941E-002,Pass,Pass
+ Warmup Convergence Information,02_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,3.3090537317E-005,6.5299874264E-005,Pass,Pass,1.9604161447E-002,3.0028295581E-002,Pass,Pass
+ Warmup Convergence Information,02_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,4.1435489662E-005,7.5055531720E-005,Pass,Pass,2.0529053872E-002,3.0988568282E-002,Pass,Pass
+ Warmup Convergence Information,03_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,4.4717490735E-005,9.4502013819E-005,Pass,Pass,1.9268470858E-002,3.3998148347E-002,Pass,Pass
+ Warmup Convergence Information,03_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,3.4859913226E-005,7.5698987341E-005,Pass,Pass,1.8175898650E-002,3.2283476037E-002,Pass,Pass
+ Warmup Convergence Information,03_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,3.1580844185E-005,6.2138262276E-005,Pass,Pass,2.1333919662E-002,3.3709527196E-002,Pass,Pass
+ Warmup Convergence Information,03_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSENTHMDB,4.0847650893E-005,7.3598174587E-005,Pass,Pass,2.2244760987E-002,3.4578961195E-002,Pass,Pass
+Environment,ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,21.20,7.50,DefaultMultipliers,100618,260,3.8,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau
+Environment:WarmupDays,  6
+ Warmup Convergence Information,01_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,6.6059847339E-005,1.4097232961E-004,Pass,Pass,3.5765149374E-002,6.7810335151E-002,Pass,Pass
+ Warmup Convergence Information,01_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,4.5411885612E-005,9.4105122439E-005,Pass,Pass,2.6122162711E-002,5.2979463632E-002,Pass,Pass
+ Warmup Convergence Information,01_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,9.9210443608E-003,2.2259654711E-002,Pass,Pass,6.0274381435E-002,0.1978249413,Pass,Pass
+ Warmup Convergence Information,01_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,1.3091905592E-002,3.3336301344E-002,Pass,Pass,6.0093072384E-002,0.2339756736,Pass,Pass
+ Warmup Convergence Information,02_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,3.6209185697E-005,7.0903207452E-005,Pass,Pass,1.7717007253E-002,3.0334987934E-002,Pass,Pass
+ Warmup Convergence Information,02_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,4.3558226344E-005,8.0396556291E-005,Pass,Pass,1.7068647603E-002,2.7910936282E-002,Pass,Pass
+ Warmup Convergence Information,02_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,2.7872199037E-005,5.1887997061E-005,Pass,Pass,1.9634632793E-002,3.0090107484E-002,Pass,Pass
+ Warmup Convergence Information,02_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,3.7754359927E-005,6.2364459372E-005,Pass,Pass,2.0570330728E-002,3.1053962962E-002,Pass,Pass
+ Warmup Convergence Information,03_A1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,3.6835646350E-005,7.4236750927E-005,Pass,Pass,1.9295963114E-002,3.4057796829E-002,Pass,Pass
+ Warmup Convergence Information,03_A2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,2.7991421239E-005,5.8411243359E-005,Pass,Pass,1.8198380960E-002,3.2351088721E-002,Pass,Pass
+ Warmup Convergence Information,03_B2,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,2.6242444396E-005,4.9530471017E-005,Pass,Pass,2.1374229978E-002,3.3813854850E-002,Pass,Pass
+ Warmup Convergence Information,03_C1,SizingPeriod: ANCHORAGEELMENDORFANNCLG.4CONDNSWBMDB,3.6640458687E-005,6.1631744485E-005,Pass,Pass,2.2300810523E-002,3.4690347526E-002,Pass,Pass
+Environment,ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,-26.00,0.00,DefaultMultipliers,100618,50,2.2,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  6
+ Warmup Convergence Information,01_A1,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,8.9435849274E-002,8.7240284842E-002,Pass,Pass,4.1595750494E-003,7.4766501458E-003,Pass,Pass
+ Warmup Convergence Information,01_A2,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,0.1213243451,0.1237457063,Pass,Pass,9.9274475529E-003,1.5617799900E-002,Pass,Pass
+ Warmup Convergence Information,01_B2,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,6.3409494954E-002,6.5780382291E-002,Pass,Pass,4.4986480958E-003,7.8743330445E-003,Pass,Pass
+ Warmup Convergence Information,01_C1,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,5.8316388814E-002,6.0860606729E-002,Pass,Pass,3.1762547852E-003,5.5502970419E-003,Pass,Pass
+ Warmup Convergence Information,02_A1,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,7.3601093600E-002,6.9965882047E-002,Pass,Pass,5.4720502410E-003,9.5524480770E-003,Pass,Pass
+ Warmup Convergence Information,02_A2,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,0.1011086724,0.1095298774,Pass,Pass,9.8075641928E-003,1.5729600404E-002,Pass,Pass
+ Warmup Convergence Information,02_B2,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,5.2514654184E-002,5.1888089717E-002,Pass,Pass,6.5260740266E-003,1.1180811511E-002,Pass,Pass
+ Warmup Convergence Information,02_C1,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,4.8245053264E-002,4.7036860149E-002,Pass,Pass,5.2990225344E-003,8.9826784440E-003,Pass,Pass
+ Warmup Convergence Information,03_A1,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,8.5030123231E-002,7.9439243284E-002,Pass,Pass,5.8060043506E-003,1.0228435734E-002,Pass,Pass
+ Warmup Convergence Information,03_A2,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,8.3900289740E-002,7.8746110732E-002,Pass,Pass,6.8510076478E-003,1.2121311265E-002,Pass,Pass
+ Warmup Convergence Information,03_B2,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,6.1081094359E-002,6.0460122798E-002,Pass,Pass,7.5405440458E-003,1.3040898438E-002,Pass,Pass
+ Warmup Convergence Information,03_C1,SizingPeriod: ANCHORAGEELMENDORFANNHTG99.6CONDNSDB,5.6214803870E-002,5.4912062870E-002,Pass,Pass,6.0716443732E-003,1.0360892806E-002,Pass,Pass
+Environment,ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,-3.10,0.00,DefaultMultipliers,100618,50,10.2,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  6
+ Warmup Convergence Information,01_A1,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,2.5093427236E-002,4.5239181355E-002,Pass,Pass,2.4008899090E-002,6.8045028768E-002,Pass,Pass
+ Warmup Convergence Information,01_A2,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,2.1876896125E-002,4.6869993125E-002,Pass,Pass,2.4368999837E-002,6.8092666456E-002,Pass,Pass
+ Warmup Convergence Information,01_B2,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,4.1400021301E-002,5.3503766454E-002,Pass,Pass,2.4216861796E-002,8.5042747254E-002,Pass,Pass
+ Warmup Convergence Information,01_C1,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,4.1164732411E-002,5.3594959859E-002,Pass,Pass,2.0507347429E-002,6.8420629977E-002,Pass,Pass
+ Warmup Convergence Information,02_A1,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,2.1750478854E-005,4.6241082636E-005,Pass,Pass,1.7114862382E-002,4.0237025949E-002,Pass,Pass
+ Warmup Convergence Information,02_A2,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,2.7025917094E-005,5.2122044100E-005,Pass,Pass,1.7721959767E-002,4.0459587176E-002,Pass,Pass
+ Warmup Convergence Information,02_B2,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,1.4467555062E-005,3.4923455940E-005,Pass,Pass,2.4067746694E-002,5.6110111830E-002,Pass,Pass
+ Warmup Convergence Information,02_C1,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,1.8480382148E-005,4.4999658084E-005,Pass,Pass,2.3464801330E-002,5.2970301542E-002,Pass,Pass
+ Warmup Convergence Information,03_A1,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,2.1229133827E-005,4.8229547822E-005,Pass,Pass,1.8739896522E-002,4.7533680187E-002,Pass,Pass
+ Warmup Convergence Information,03_A2,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,1.5855708971E-005,3.7321704734E-005,Pass,Pass,2.0103259248E-002,5.2471580334E-002,Pass,Pass
+ Warmup Convergence Information,03_B2,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,1.3255597169E-005,3.3671266361E-005,Pass,Pass,2.6573926176E-002,6.8755380956E-002,Pass,Pass
+ Warmup Convergence Information,03_C1,SizingPeriod: ANCHORAGEELMENDORFANNHTGWIND99.6CONDNSWSMCDB,1.7244936703E-005,4.4123675298E-005,Pass,Pass,2.5982999103E-002,6.4842074885E-002,Pass,Pass
+Environment,ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,-23.70,0.00,DefaultMultipliers,100618,50,2.2,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  6
+ Warmup Convergence Information,01_A1,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,7.1436664602E-002,8.1023172268E-002,Pass,Pass,1.0017510939E-002,3.0865371363E-002,Pass,Pass
+ Warmup Convergence Information,01_A2,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,9.3624213000E-002,0.1083495653,Pass,Pass,1.3963619732E-002,2.9480555104E-002,Pass,Pass
+ Warmup Convergence Information,01_B2,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,6.3380584045E-002,6.4908230704E-002,Pass,Pass,4.7303430607E-003,8.4542004184E-003,Pass,Pass
+ Warmup Convergence Information,01_C1,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,5.8359411459E-002,6.0041775220E-002,Pass,Pass,3.3598585064E-003,5.9592263682E-003,Pass,Pass
+ Warmup Convergence Information,02_A1,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,1.9210537107E-002,3.1268753986E-002,Pass,Pass,1.7219514368E-002,4.6139284412E-002,Pass,Pass
+ Warmup Convergence Information,02_A2,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,4.2705787853E-002,5.1618915012E-002,Pass,Pass,1.5507478658E-002,4.0217589809E-002,Pass,Pass
+ Warmup Convergence Information,02_B2,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,5.0226646325E-002,5.1523461142E-002,Pass,Pass,9.9784596000E-003,2.3602685906E-002,Pass,Pass
+ Warmup Convergence Information,02_C1,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,4.3365944874E-002,4.6860722350E-002,Pass,Pass,1.0807648938E-002,2.9498623154E-002,Pass,Pass
+ Warmup Convergence Information,03_A1,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,3.3486278595E-002,4.0573773602E-002,Pass,Pass,1.6289324382E-002,4.8596483386E-002,Pass,Pass
+ Warmup Convergence Information,03_A2,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,4.5023481556E-002,5.0149857054E-002,Pass,Pass,1.5265147960E-002,5.3148798581E-002,Pass,Pass
+ Warmup Convergence Information,03_B2,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,6.1010353630E-002,5.9686627671E-002,Pass,Pass,7.6833677148E-003,1.3533432325E-002,Pass,Pass
+ Warmup Convergence Information,03_C1,SizingPeriod: ANCHORAGEELMENDORFANNHUM_N99.6CONDNSDPMCDB,5.5568500004E-002,5.4335373796E-002,Pass,Pass,6.3046086518E-003,1.0848111968E-002,Pass,Pass
+Environment,RUN PERIOD 1,WeatherFileRunPeriod,01/01,12/31,Sunday,365,Use RunPeriod Specified Day,No,No,No,Yes,Yes
+Environment:Daylight Saving,No,RunPeriod Object
+Environment:WarmupDays,  6
+ Warmup Convergence Information,01_A1,RunPeriod: RUN PERIOD 1,0.1514487740,0.2795989057,Pass,Pass,4.1123701324E-002,0.1103388275,Pass,Pass
+ Warmup Convergence Information,01_A2,RunPeriod: RUN PERIOD 1,0.1902991607,0.5528823100,Pass,Pass,6.5122023941E-002,0.1678680644,Pass,Pass
+ Warmup Convergence Information,01_B2,RunPeriod: RUN PERIOD 1,0.1410063817,0.2562833970,Pass,Pass,6.1412674093E-002,0.2424370657,Pass,Pass
+ Warmup Convergence Information,01_C1,RunPeriod: RUN PERIOD 1,0.1199882861,0.1814151867,Pass,Pass,4.5612926481E-002,0.1670738565,Pass,Pass
+ Warmup Convergence Information,02_A1,RunPeriod: RUN PERIOD 1,0.1253474926,0.3041432648,Pass,Pass,7.3251565323E-002,0.2165205248,Pass,Pass
+ Warmup Convergence Information,02_A2,RunPeriod: RUN PERIOD 1,0.1863136321,0.5613773238,Pass,Pass,6.4317698217E-002,0.1725328789,Pass,Pass
+ Warmup Convergence Information,02_B2,RunPeriod: RUN PERIOD 1,0.1174028433,0.2769005494,Pass,Pass,8.5227326934E-002,0.2672539489,Pass,Pass
+ Warmup Convergence Information,02_C1,RunPeriod: RUN PERIOD 1,0.1082854409,0.2335543477,Pass,Pass,7.5928292690E-002,0.2402367381,Pass,Pass
+ Warmup Convergence Information,03_A1,RunPeriod: RUN PERIOD 1,0.1487378648,0.3358656609,Pass,Pass,7.7064956168E-002,0.2304307411,Pass,Pass
+ Warmup Convergence Information,03_A2,RunPeriod: RUN PERIOD 1,0.1716172671,0.3836412645,Pass,Pass,8.6361876350E-002,0.2609955017,Pass,Pass
+ Warmup Convergence Information,03_B2,RunPeriod: RUN PERIOD 1,0.1433608609,0.3221293894,Pass,Pass,9.5608393998E-002,0.3105476290,Pass,Pass
+ Warmup Convergence Information,03_C1,RunPeriod: RUN PERIOD 1,0.1323338976,0.2679974408,Pass,Pass,8.6574836564E-002,0.2868975970,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data

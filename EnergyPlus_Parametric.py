@@ -38,6 +38,8 @@ def pickupblocks(packedlist, tar):
     :return: This function returns a dictionary of the picked block in which the key is the statement in ddy file after "!-"
     '''
     d = {}          ##store data in a dictionary
+
+
 ##Site:Location
     for blocks in packedlist:
         for lines in blocks:

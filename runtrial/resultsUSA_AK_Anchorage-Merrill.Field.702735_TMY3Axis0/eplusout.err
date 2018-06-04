@@ -1,0 +1,319 @@
+Program Version,EnergyPlus, Version 8.9.0-40101eaafd, YMD=2018.05.31 16:15,
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS OFF DISCRETE", Blank Schedule Type Limits Name input -- will not be validated.
+   ** Warning ** ProcessScheduleInput: Schedule:Constant="ALWAYS ON CONTINUOUS", Blank Schedule Type Limits Name input -- will not be validated.
+   ************* Beginning Zone Sizing Calculations
+   ** Warning ** GetHTSurfaceData: Surfaces with interface to Ground found but no "Ground Temperatures" were input.
+   **   ~~~   ** Found first in surface=SURFACE 9
+   **   ~~~   ** Defaults, constant throughout the year of (18.0) will be used.
+   ** Warning ** GetSurfaceData: WindowProperty:ShadingControl: "SHADING CONTROL 1" is not referenced by any window.
+   ** Warning ** CheckUsedConstructions: There are 12 nominally unused constructions in input.
+   **   ~~~   ** For explicit details on each unused construction, use Output:Diagnostics,DisplayExtraWarnings;
+   ** Warning ** Calculated design heating load for zone=01_A2 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=02_A1 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=02_A2 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=02_B2 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=02_C1 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=03_A1 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=03_A2 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=03_B2 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ** Warning ** Calculated design heating load for zone=03_C1 is zero.
+   **   ~~~   ** Check Sizing:Zone and ZoneControl:Thermostat inputs.
+   ************* Beginning System Sizing Calculations
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 5"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.19545 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.19545 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 9"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 14"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.38940 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.38940 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 10"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 15"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.45462 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.45462 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 11"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 16"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.39470 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.39470 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 1"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 6"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.32470 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.32470 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 2"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 7"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.25757 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.25757 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 3"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 8"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.19244 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.19244 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 4"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 9"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.32470 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.32470 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 5"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 10"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.37290 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.37290 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 6"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 11"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.42448 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.42448 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 7"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 12"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.37074 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.37074 m3/s.
+   ** Warning ** AirLoopHVAC:UnitarySystem "UNITARY - DX HEAT PUMP - CYCLING - ELEC REHEAT 8"
+   **   ~~~   ** ...For fan type and name = Fan:OnOff "FAN ON OFF 13"
+   **   ~~~   ** ...Fan power ratio function of speed ratio curve has no impact if fan volumetric flow rate is the same as the unitary system volumetric flow rate.
+   **   ~~~   ** ...Fan volumetric flow rate            = 0.32470 m3/s.
+   **   ~~~   ** ...Unitary system volumetric flow rate = 0.32470 m3/s.
+   ************* Testing Individual Branch Integrity
+   ************* All Branches passed integrity testing
+   ************* Testing Individual Supply Air Path Integrity
+   ************* All Supply Air Paths passed integrity testing
+   ************* Testing Individual Return Air Path Integrity
+   ************* All Return Air Paths passed integrity testing
+   ** Severe  ** Node Connection Error, Node="NODE 23", ZoneInlet node did not find an outlet node.
+   **   ~~~   ** Reference Object=ZONEHVAC:EQUIPMENTCONNECTIONS, Name=01_A2
+   ** Severe  ** Node Connection Error, Node="NODE 22", ZoneExhaust node did not find a matching inlet node.
+   **   ~~~   ** Reference Object=ZONEHVAC:EQUIPMENTCONNECTIONS, Name=01_A2
+   ************* There were 2 node connection errors noted.
+   ************* Beginning Simulation
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 8" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -23.90
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 00:00 - 00:05
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 8" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = 1.16 C.
+   **   ~~~   **  ...Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 00:00 - 00:05
+   **   ~~~   ** ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil
+   **   ~~~   **    1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 20.863 C.
+   **   ~~~   **    2) may have a low air flow rate per watt of cooling capacity. Check inputs.
+   **   ~~~   **    3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 12" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -23.90
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 12:30 - 12:40
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 12" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = 0.96 C.
+   **   ~~~   **  ...Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 12:30 - 12:40
+   **   ~~~   ** ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil
+   **   ~~~   **    1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 20.855 C.
+   **   ~~~   **    2) may have a low air flow rate per watt of cooling capacity. Check inputs.
+   **   ~~~   **    3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 9" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -23.90
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 16:00 - 16:10
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 9" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = 1.18 C.
+   **   ~~~   **  ...Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 16:00 - 16:10
+   **   ~~~   ** ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil
+   **   ~~~   **    1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 21.104 C.
+   **   ~~~   **    2) may have a low air flow rate per watt of cooling capacity. Check inputs.
+   **   ~~~   **    3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 13" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -23.90
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 16:40 - 16:50
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 13" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = 1.44 C.
+   **   ~~~   **  ...Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 16:40 - 16:50
+   **   ~~~   ** ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil
+   **   ~~~   **    1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 21.323 C.
+   **   ~~~   **    2) may have a low air flow rate per watt of cooling capacity. Check inputs.
+   **   ~~~   **    3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 5" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -23.90
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 17:25 - 17:30
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 5" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = 1.09 C.
+   **   ~~~   **  ...Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 17:25 - 17:30
+   **   ~~~   ** ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil
+   **   ~~~   **    1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 20.514 C.
+   **   ~~~   **    2) may have a low air flow rate per watt of cooling capacity. Check inputs.
+   **   ~~~   **    3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 4" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -23.90
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 17:30 - 17:40
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 4" - Full load outlet air dry-bulb temperature < 2C. This indicates the possibility of coil frost/freeze. Outlet temperature = -0.19 C.
+   **   ~~~   **  ...Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 17:30 - 17:40
+   **   ~~~   ** ... Possible reasons for low outlet air dry-bulb temperatures are: This DX coil
+   **   ~~~   **    1) may have a low inlet air dry-bulb temperature. Inlet air temperature = 18.548 C.
+   **   ~~~   **    2) may have a low air flow rate per watt of cooling capacity. Check inputs.
+   **   ~~~   **    3) is used as part of a HX assisted cooling coil which uses a high sensible effectiveness. Check inputs.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 11" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -23.90
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 19:30 - 19:40
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 10" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -23.90
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTG99.6CONDNSDB, 01/21 20:20 - 20:30
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 14" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -7.50
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTGWIND99.6CONDNSWSMCDB, 01/21 00:00 - 00:10
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 15" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -7.50
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTGWIND99.6CONDNSWSMCDB, 01/21 00:00 - 00:10
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 6" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -7.50
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTGWIND99.6CONDNSWSMCDB, 01/21 17:30 - 17:40
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed "1 SPD DX CLG COIL 7" - Air-cooled condenser inlet dry-bulb temperature below 0 C. Outdoor dry-bulb temperature = -7.50
+   **   ~~~   **  ... Occurrence info = ANCHORAGEMERRILLFIELDANNHTGWIND99.6CONDNSWSMCDB, 01/21 17:50 - 18:00
+   **   ~~~   ** ... Operation at low ambient temperatures may require special performance curves.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-ELECTRICITY" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-DISTILLATE OIL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-RESIDUAL OIL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-NATURAL GAS" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ** Warning ** The resource referenced by LifeCycleCost:UsePriceEscalation= "U.S. AVG  COMMERCIAL-COAL" has no energy cost. 
+   **   ~~~   ** ... It is likely that the wrong resource is used. The resource should match the meter used in Utility:Tariff.
+   ************* Simulation Error Summary *************
+   ** Warning ** The following Report Variables were requested but not generated -- check.rdd file
+   **   ~~~   ** Either the IDF did not contain these elements, the variable name is misspelled,
+   **   ~~~   ** or the requested variable is an advanced output which requires Output : Diagnostics, DisplayAdvancedReportVariables;
+   ************* Key=*, VarName=SYSTEM NODE LAST TIMESTEP TEMPERATURE, Frequency=Hourly
+   ************* There are 24 unused schedules in input.
+   ************* There are 24 unused week schedules in input.
+   ************* There are 82 unused day schedules in input.
+   ************* Use Output:Diagnostics,DisplayUnusedSchedules; to see them.
+   *************
+   ************* ===== Recurring Error Summary =====
+   ************* The following recurring error messages occurred.
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 8" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 359 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-23.9 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 8" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:
+   *************  **   ~~~   **   This error occurred 230 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=1.987413  Min=0.386504
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 12" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 306 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-23.9 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 12" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:
+   *************  **   ~~~   **   This error occurred 206 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=1.997346  Min=0.657931
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 9" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 280 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-23.9 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 9" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:
+   *************  **   ~~~   **   This error occurred 79 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=1.990762  Min=1.041404
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 13" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 238 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-23.9 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 13" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:
+   *************  **   ~~~   **   This error occurred 38 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=1.991716  Min=1.145926
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 5" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 156 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-23.9 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 5" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:
+   *************  **   ~~~   **   This error occurred 26 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=1.974945  Min=0.796812
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 4" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 139 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-23.9 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 4" - Full load outlet temperature indicates a possibility of frost/freeze error continues. Outlet air temperature statistics follow:
+   *************  **   ~~~   **   This error occurred 55 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=0.562211  Min=-0.250151
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 11" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 175 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-23.9 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 10" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 164 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-23.9 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 14" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 125 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-22.3 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 15" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 130 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-22.3 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 6" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 27 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-7.5 [C]
+   *************
+   *************  ** Warning ** CalcDoe2DXCoil: Coil:Cooling:DX:SingleSpeed="1 SPD DX CLG COIL 7" - Low condenser dry-bulb temperature error continues...
+   *************  **   ~~~   **   This error occurred 25 total times;
+   *************  **   ~~~   **   during Warmup 0 times;
+   *************  **   ~~~   **   during Sizing 0 times.
+   *************  **   ~~~   **   Max=-7.5 [C]  Min=-7.5 [C]
+   *************
+   *************
+   ************* ===== Final Error Summary =====
+   ************* The following error categories occurred.  Consider correcting or noting.
+   ************* Node Connection Errors
+   ************* ..Node connection errors are often caused by spelling mistakes in a node name field.
+   ************* ..To track down the problem, search the idf file for each node name listed to see if it
+   ************* ..occurs in the expected input fields.
+   ************* Nominally Unused Constructions
+   ************* ..The nominally unused constructions warning is provided to alert you to potential conditions that can cause
+   ************* ..extra time during simulation. Each construction is calculated by the algorithm indicated in the HeatBalanceAlgorithm
+   ************* ..object. You may remove the constructions indicated (when you use the DisplayExtraWarnings option).
+   *************
+   ************* EnergyPlus Warmup Error Summary. During Warmup: 0 Warning; 0 Severe Errors.
+   ************* EnergyPlus Sizing Error Summary. During Sizing: 14 Warning; 0 Severe Errors.
+   ************* EnergyPlus Completed Successfully-- 2790 Warning; 2 Severe Errors; Elapsed Time=00hr 00min 58.34sec

@@ -128,15 +128,15 @@ def UpdateLocationInfinIDF(idf1,ddyname):
     return idf1
 
 ##write epw name into a .csv file for later use of weather file
-def WriteEPWNameToCSV(WeatherPath, CsvPath):
+def WriteEPWNameToCSV(WeatherPath, CsvPath, i):
     ls = os.listdir(WeatherPath)
     print (ls)
     with open(CsvPath,'wt') as f:
-        i = 0
+        k = 0
         for epwitem in ls:
-            if i <7:
+            if k < i:
                  f.writelines(os.path.splitext(epwitem)[0]+"\n")
-                 i+=1
+                 k += 1
 
 ## read epw file names
 def ReadFileNameInCsv(dir):
@@ -157,17 +157,20 @@ def ReadFileNameInCsv(dir):
 ##set idd file
 iddfile = "Energy+.idd"
 IDF.setiddname(iddfile)
-DirName = '../eppy trial'
-EPDir = "C:\\EnergyPlusV8-9-0\\"
-WeatherDir = EPDir+'WeatherData\\weather_files_ddy_epw\\epw\\USA'
+DirName = '../eppy_energy-'
+WeatherDir = DirName+'/weather/weather_files_ddy_epw/'
+epwDir = WeatherDir + 'epw/USA/'
+ddyDir = WeatherDir + 'ddy/USA/'
 CSVDir = DirName+'/runtrial/WeatherFileNameList.csv'
-WriteEPWNameToCSV(WeatherDir,CSVDir)
+WriteEPWNameToCSV(epwDir, CSVDir , 8)
 weatherfilename_list = ReadFileNameInCsv(CSVDir)
+
 print(weatherfilename_list)
+
 ##run with different locations
 for i in weatherfilename_list:
-    epwname = EPDir+'WeatherData\\weather_files_ddy_epw\\epw\\USA\\'+i +'.epw'         ##Before write the path, put weather files in EnergyPlus WeatherData folder
-    ddyname = EPDir+'WeatherData\\weather_files_ddy_epw\\ddy\\USA\\'+i +'.ddy'
+    epwname = epwDir + i +'.epw'         ##Before write the path, put weather files in EnergyPlus WeatherData folder
+    ddyname = ddyDir + i +'.ddy'
     fname1 = DirName + '/runtrial/TrialKA2_Unsized.idf'
     idf1 = IDF(fname1, epwname)
     UpdateLocationInfinIDF(idf1,ddyname)
@@ -175,9 +178,9 @@ for i in weatherfilename_list:
     building = idf1.idfobjects['BUILDING'][0]
     building.Name = "KA2 A Flatroof Sample Building"
     objectlist = idf1.idfobjects
-    dirname = u'../eppy trial/runtrial/'
-    resultsdir = dirname+'results'+i
-    os.makedirs(resultsdir)
+    rundirname = u'../eppy_energy-/runtrial/'
+    resultsdir = rundirname+'results'+i
+    ##os.makedirs(resultsdir)
     idf1.saveas(DirName + "/idfs/"+i+'.idf')
     idf1.run(output_directory = resultsdir)
 
@@ -185,7 +188,7 @@ Axis = 0
 while Axis in range(0,360):
     building.North_Axis = Axis
     ##idf1.saveas(DirName+'/idfs/Axises/'+str(Axis)+".idf")
-    resultsdirAxis= dirname+'results'+i+'Axis'+str(Axis)
+    resultsdirAxis= rundirname+'results'+i+'Axis'+str(Axis)
     ##os.makedirs(resultsdirAxis)
     ##idf1.run(output_directory = resultsdirAxis)
     Axis += 45

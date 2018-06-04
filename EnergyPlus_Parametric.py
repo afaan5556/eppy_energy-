@@ -129,6 +129,13 @@ def UpdateLocationInfinIDF(idf1,ddyname):
 
 ##write epw name into a .csv file for later use of weather file
 def WriteEPWNameToCSV(WeatherPath, CsvPath, i):
+    '''
+    This function automatically writes the csv file with weather file names by reading the name list in the directory where these files stored.
+    :param WeatherPath: This is the path to the directory where the weather files are stored
+    :param CsvPath: This is the path to the .csv file
+    :param i: This is the number of weather files written into the csv file in the loop
+    :return: This function returns nothing
+    '''
     ls = os.listdir(WeatherPath)
     print (ls)
     with open(CsvPath,'wt') as f:
